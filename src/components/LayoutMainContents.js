@@ -1,6 +1,5 @@
 import React from 'react';
 import MainContents from './MainContents';
-import { Row } from 'reactstrap';
 import * as service from '../services/getService';
 
 export default class Example extends React.Component {
@@ -28,15 +27,18 @@ export default class Example extends React.Component {
     }
     render() {
         return (
-            <div>
-                <Row>
-                    {this.state.areaData.map((value, index) => {
-                        return (
-                            <MainContents addr={value.addr1} title={value.title} key={index} thumb_url={value.firstimage} reg_date={value.createdtime} />
-                        );
-                    })}
-                </Row>
-            </div>
+            <section>
+                <div className="container">
+                    <ul className="main-items clearfix">
+                        {this.state.areaData.map((value, index) => {
+                            console.log(value);
+                            return (
+                                <MainContents addr={value.addr1} title={value.title} key={index} thumb_url={value.firstimage} reg_date={value.createdtime} />
+                            );
+                        })}
+                    </ul>
+                </div>
+            </section>
         );
     }
 }

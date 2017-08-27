@@ -17,14 +17,12 @@ export const getDivisionCode = (cat1, cat2) => {
 export const getAreaData = (areaCode, sigunguCode) => {
     return axios.get("http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?ServiceKey=" + Myconfig.API_Auth_Key, {
         params: {
-            contentTypeId: 15,
             areaCode: areaCode,
-            sigugunCode: sigunguCode,
             numOfRows: 10,
             pageNo: 1,
+            arrange: 'D',
             MobileOS: 'ETC',
             MobileApp: 'AppTesting',
-            arrange: 'A',
         }
     });
 }

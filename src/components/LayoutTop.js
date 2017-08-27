@@ -1,38 +1,31 @@
 import React from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 export default class Example extends React.Component {
     constructor(props) {
         super(props);
 
-        this.toggleNavbar = this.toggleNavbar.bind(this);
         this.state = {
             collapsed: true
         };
     }
 
-    toggleNavbar() {
-        this.setState({
-            collapsed: !this.state.collapsed
-        });
-    }
     render() {
         return (
-            <div>
-                <Navbar color="faded" light>
-                    <NavbarToggler onClick={this.toggleNavbar} />
-                    <Collapse className="navbar-toggleable-md" isOpen={!this.state.collapsed}>
-                        <NavbarBrand href="/">reactstrap</NavbarBrand>
-                        <Nav navbar>
-                            <NavItem>
-                                <NavLink href="/components/">Components</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
-                            </NavItem>
-                        </Nav>
-                    </Collapse>
-                </Navbar>
+            <div className="menu-wrap">
+                <nav className="menu">
+                    <ul className="clearfix">
+                        <li><Link to="/">Home</Link></li>
+                        <li>
+                            <Link to="/sub">소개<span className="arrow">&#9660;</span></Link>
+                            <ul className="sub-menu">
+                                <li><a>Components</a></li>
+                                <li><a>Github</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">제품</a></li>
+                    </ul >
+                </nav>
             </div>
         );
     }

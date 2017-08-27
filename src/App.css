@@ -1,0 +1,129 @@
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-items {
+    padding-left: 0px;
+}
+
+.main-item {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    max-width: 295px;
+    min-width: 200px;
+    max-height: 200px;
+    min-height: 200px;
+    float: left;
+    padding: 1px;
+    border: 1px solid;
+    border-color: #919191;
+    overflow: hidden;
+}
+
+.main-item .figure {
+    max-height: 110px;
+}
+
+div ul li img {
+    width: 190px;
+    height: 110px;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+
+/**
+*TOP 메뉴 CSS
+**/
+
+.menu-wrap {
+    width: 100%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+    background: #3e3436;
+}
+
+.menu {
+    margin: 0 auto;
+}
+
+.menu li {
+    margin: 0px;
+    list-style: none;
+}
+
+.menu a {
+    transition: all linear 0.15s;
+    color: #919191;
+}
+
+.menu li:hover>a,
+.menu .current-item>a {
+    text-decoration: none;
+    color: #be5b70;
+}
+
+.menu .arrow {
+    font-size: 11px;
+    line-height: 0%;
+}
+
+.menu>ul>li {
+    float: left;
+    display: inline-block;
+    position: relative;
+    font-size: 19px;
+}
+
+.menu>ul>li>a {
+    padding: 10px 40px;
+    display: inline-block;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
+}
+
+.menu>ul>li:hover>a,
+.menu>ul>.current-item>a {
+    background: #2e2728;
+}
+
+.menu li:hover .sub-menu {
+    z-index: 1;
+    opacity: 1;
+}
+
+.sub-menu {
+    width: 160%;
+    padding: 5px 0px;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity linear 0.15s;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+    background: #2e2728;
+}
