@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
+import * as Oauth from '../services/Oauth';
 export default class Example extends React.Component {
     constructor(props) {
         super(props);
@@ -17,13 +17,14 @@ export default class Example extends React.Component {
                     <ul className="clearfix">
                         <li><Link to="/">Home</Link></li>
                         <li>
-                            <Link to="/sub">소개<span className="arrow">&#9660;</span></Link>
+                            <Link to="/info/5">소개<span className="arrow">&#9660;</span></Link>
                             <ul className="sub-menu">
                                 <li><a>Components</a></li>
                                 <li><a>Github</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">제품</a></li>
+                        <li><a>제품</a></li>
+                        <li><button onClick={Oauth.facebook}>SNS로그인</button></li>
                     </ul >
                 </nav>
             </div>

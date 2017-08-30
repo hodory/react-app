@@ -1,6 +1,5 @@
 import React from 'react';
 import * as service from '../services/getService';
-import { Link } from 'react-router-dom';
 
 export default class LayoutMain extends React.Component {
     constructor(props) {
@@ -22,19 +21,18 @@ export default class LayoutMain extends React.Component {
         this.fetchInfo();
     }
     handleChange(event) {
-        this.setState({ value: event.target.value });
-        this.props.history.push('/info/' + event.target.value)
+        // this.setState({ value: event.target.value });
+        console.log(event.target.value);
+        console.log('zzz');
     }
     render() {
         return (
-            <div>
-                <select value={this.state.value} onChange={this.handleChange}>
-                    <option value="">전체</option>
-                    {this.state.areaData.map((value, index) => {
-                        return (<option key={index} value={value.code}>{value.name}</option>);
-                    })}
-                </select>
-            </div >
+            <select value={this.state.value} onChange={this.handleChange}>
+                <option value="">전체2</option>
+                {this.state.areaData.map((value, index) => {
+                    return (<option key={index} value={value.code}>{value.name}</option>);
+                })}
+            </select>
         );
     }
 }

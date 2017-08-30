@@ -5,6 +5,8 @@ import './Normalize.css';
 import './App.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-
+import * as firebase from 'firebase';
+import { firebaseConfig } from './config.js';
+firebase.initializeApp(firebaseConfig);
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

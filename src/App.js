@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TopLayoutComponent from './components/LayoutTop';
-import MainLayoutComponent from './components/LayoutMainContents';
+import MainLayoutComponent from './components/LayoutMain';
 
 import SubContent from './components/LayoutSubContents';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -14,8 +14,8 @@ class App extends Component {
             <TopLayoutComponent />
           </header>
           <div>
-            <Route exact path="/" component={MainLayoutComponent}></Route>
-            <Route path="/sub" component={SubContent}></Route>
+            <Route path="/info" component={SubContent}></Route>
+            <Route path="/info/:areaCode" component={MainLayoutComponent}></Route>
           </div>
         </div>
       </Router>
