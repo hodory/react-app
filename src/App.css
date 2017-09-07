@@ -103,6 +103,7 @@ html[xmlns] .clearfix {
     padding: 10px 40px;
     display: inline-block;
     text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
 }
 
 .menu>ul>li:hover>a,

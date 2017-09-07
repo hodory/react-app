@@ -14,7 +14,7 @@ class App extends Component {
             <TopLayoutComponent />
           </header>
           <div>
-            <Route path="/info" component={SubContent}></Route>
+            <Route path="/" component={SubContent}></Route>
             <Route path="/info/:areaCode" component={MainLayoutComponent}></Route>
           </div>
         </div>

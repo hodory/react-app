@@ -34,6 +34,18 @@ export default class LayoutMain extends React.Component {
                         return (<option key={index} value={value.code}>{value.name}</option>);
                     })}
                 </select>
+                <div>
+                    <ul>
+                        <li><Link to="/info/">전체</Link></li>
+                        <li><Link to="/info/1">자연</Link></li>
+                        <li><Link to="/info/2">체험</Link></li>
+                        <li><Link to="/info/3">문화시설</Link></li>
+                        <li><Link to="/info/4">레포츠</Link></li>
+                        <li><Link to="/info/5">역사</Link></li>
+                        <li><Link to="/info/6">테마</Link></li>
+                        <li><Link to="/info/7">쇼핑</Link></li>
+                    </ul>
+                </div>
             </div >
         );
     }

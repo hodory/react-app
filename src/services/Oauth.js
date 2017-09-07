@@ -7,14 +7,15 @@ export const facebook = () => {
     provider.setCustomParameters({
         'display': 'popup'
     });
-    firebase.auth().signInWithPopup(provider).then((result) => {
+    return firebase.auth().signInWithPopup(provider).then((result) => {
         // This gives you a Facebook Access Token. You can use it to access the Facebook API.
         let token = result.credential.accessToken;
         // The signed-in user info.
         let user = result.user;
         let user_info = result.additionalUserInfo.profile;
-        console.log(user_info)
-        // ...
+        window.sessionStorage.setItem("token", token);
+        window.sessionStorage.setItem("email", user.email);
+        window.sessionStorage.setItem("user_info", user_info);
     }).catch(function (error) {
         // Handle Errors here.
         let errorCode = error.code;
