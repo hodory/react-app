@@ -1,4 +1,5 @@
 import * as firebase from 'firebase';
+import * as firebaseService from './firebasedb';
 
 export const facebook = () => {
     var provider = new firebase.auth.FacebookAuthProvider();
@@ -16,6 +17,7 @@ export const facebook = () => {
         window.sessionStorage.setItem("token", token);
         window.sessionStorage.setItem("email", user.email);
         window.sessionStorage.setItem("user_info", user_info);
+        firebaseService.writeData(user_info.id, user.email, user_info, token);
     }).catch(function (error) {
         // Handle Errors here.
         let errorCode = error.code;
