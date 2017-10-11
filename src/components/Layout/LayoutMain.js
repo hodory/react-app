@@ -1,6 +1,6 @@
 import React from 'react';
-import MainContents from './MainContents';
-import * as service from '../services/getService';
+import Content from '../Content/Content';
+import * as service from '../../services/getService';
 
 export default class LayoutMain extends React.Component {
     constructor(props) {
@@ -38,7 +38,14 @@ export default class LayoutMain extends React.Component {
                     <ul className="main-items clearfix">
                         {this.state.areaData.map((value, index) => {
                             return (
-                                <MainContents addr={value.addr1} title={value.title} key={index} thumb_url={value.firstimage} reg_date={value.createdtime} />
+                                <Content addr={value.addr1}
+                                    title={value.title}
+                                    thumb_url={value.firstimage}
+                                    reg_date={value.createdtime}
+                                    areaCode={value.areacode}
+                                    contentId={value.contentid}
+                                    key={index}
+                                />
                             );
                         })}
                     </ul>

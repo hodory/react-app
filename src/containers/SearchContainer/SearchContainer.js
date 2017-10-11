@@ -1,7 +1,7 @@
 import React from 'react';
-import * as service from '../services/getService';
+import * as service from '../../services/getService';
 
-export default class LayoutMain extends React.Component {
+export default class SearchContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -21,9 +21,6 @@ export default class LayoutMain extends React.Component {
         this.fetchInfo();
     }
     handleChange(event) {
-        // this.setState({ value: event.target.value });
-        console.log(event.target.value);
-        console.log('zzz');
     }
     render() {
         return (

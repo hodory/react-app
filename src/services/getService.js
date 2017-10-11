@@ -42,3 +42,19 @@ export const getAreaData = (areaCode, sigunguCode, contentTypeId) => {
         }
     });
 }
+
+//관광정보 상세 조회
+export const getDetail = (contentId) => {
+    return axios.get("http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailCommon?ServiceKey=" + Myconfig.API_Auth_Key,
+        {
+            params: {
+                contentId: contentId,
+                defaultYN: 'Y',
+                firstImageYN : 'Y',
+                addrinfoYN:'Y',
+                overviewYN :'Y',
+                MobileOS: 'ETC',
+                MobileApp: 'AppTesting',
+            }
+        });
+}

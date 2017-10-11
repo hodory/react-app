@@ -1,5 +1,5 @@
 import React from 'react';
-import * as service from '../services/getService';
+import * as service from '../../services/getService';
 import { Link } from 'react-router-dom';
 
 export default class LayoutMain extends React.Component {

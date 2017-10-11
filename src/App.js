@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import TopLayoutComponent from './components/LayoutTop';
-import MainLayoutComponent from './components/LayoutMain';
+import TopLayoutComponent from './components/Layout/LayoutTop';
+import MainLayoutComponent from './components/Layout/LayoutMain';
 
-import SubContent from './components/LayoutSubContents';
+import SubContent from './components/Layout/LayoutSubContents';
+import DetailContainer from './containers/ContentContainer/DetailContainer';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
           <div>
             <Route path="/" component={SubContent}></Route>
             <Route path="/info/:areaCode" component={MainLayoutComponent}></Route>
+            <Route exact path="/info/:areaCode/:contentId" component={DetailContainer}></Route>
           </div>
         </div>
       </Router>
