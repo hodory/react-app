@@ -13,14 +13,14 @@ export const getAreaCode = () => {
 };
 
 //서비스 분류코드조회
-export const getDivisionCode = (cat1, cat2) => {
+export const getDivisionCode = (contentTypeId,pageNo,NumRows,cat1, cat2) => {
     return axios.get('http://api.visitkorea.or.kr/openapi/service/rest/KorService/categoryCode?ServiceKey=' + Myconfig.API_Auth_Key, {
         params: {
-            contentTypeId: 12,
+            contentTypeId: contentTypeId,
             cat1: cat1,
             cat2: cat2,
-            numOfRows: 10,
-            pageNo: 1,
+            numOfRows: NumRows,
+            pageNo: pageNo,
             MobileOS: 'ETC',
             MobileApp: 'AppTesting'
         }
@@ -28,15 +28,15 @@ export const getDivisionCode = (cat1, cat2) => {
 }
 
 //지역기반 관광 정보 조회
-export const getAreaData = (areaCode, sigunguCode, contentTypeId) => {
+export const getAreaData = (pageNo, contentTypeId, areaCode, sigunguCode) => {
     return axios.get("http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?ServiceKey=" + Myconfig.API_Auth_Key, {
         params: {
             areaCode: areaCode,
             sigunguCode: sigunguCode,
             contentTypeId: contentTypeId,
-            numOfRows: 10,
-            pageNo: 1,
-            arrange: 'D',
+            numOfRows: 8,
+            pageNo: pageNo,
+            arrange: 'P',
             MobileOS: 'ETC',
             MobileApp: 'AppTesting',
         }
@@ -57,4 +57,14 @@ export const getDetail = (contentId) => {
                 MobileApp: 'AppTesting',
             }
         });
+}
+
+// 행사 / 공연/ 축제 조회
+export const getFestival = () => {
+    return axios.get("http://api.visitkorea.or.kr/openapi/service/rest/KorService/searchFestival?ServiceKey=" + Myconfig.API_Auth_Key,
+    {
+        params : {
+
+        }
+    });
 }

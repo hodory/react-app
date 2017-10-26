@@ -8,12 +8,13 @@ export default class LayoutMain extends React.Component {
         this.state = {
             divisionData: [],
             areaData: [],
+            pageNo : 1
         };
     }
     fetchInfo = async (props) => {
         let params = props.match.params;
         const divisionService = await service.getDivisionCode('A01', 'A0101');
-        const areaService = await service.getAreaData(params.areaCode, params.sigugun);
+        const areaService = await service.getAreaData(this.state.pageNo, '',params.areaCode, params.sigugun);
 
         let divisionData = divisionService.data.response.body.items.item;
         let areaData = areaService.data.response.body.items.item;

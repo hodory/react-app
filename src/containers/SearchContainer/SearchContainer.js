@@ -21,15 +21,19 @@ export default class SearchContainer extends React.Component {
         this.fetchInfo();
     }
     handleChange(event) {
+        this.setState({ value: event.target.value });
+        this.props.history.push('/info/' + event.target.value)
     }
     render() {
         return (
-            <select value={this.state.value} onChange={this.handleChange}>
-                <option value="">전체2</option>
-                {this.state.areaData.map((value, index) => {
-                    return (<option key={index} value={value.code}>{value.name}</option>);
-                })}
-            </select>
+            <div>
+                <select value={this.state.value} onChange={this.handleChange}>
+                    <option value="">전체</option>
+                    {this.state.areaData.map((value, index) => {
+                        return (<option key={index} value={value.code}>{value.name}</option>);
+                    })}
+                </select>
+            </div >
         );
     }
 }
