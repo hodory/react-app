@@ -50,7 +50,9 @@ img {
 .content-layer {
     display: none;
     position: absolute;
-    background: rgba(255, 255, 255, 0.7);
+    top: 0;
+    color: white;
+    background: rgba(70, 70, 70, 0.7);
     width: 100%;
     height: 100%;
     padding: 100px 0;
