@@ -26,7 +26,6 @@ class ContentContainer extends Component {
         let swiper = new Swiper('.swiper-container', {
             // Enable lazy loading
             lazy : true,
-            observer :true,
             effect: 'fade',
             pagination: {
               el: '.swiper-pagination',
@@ -49,7 +48,7 @@ class ContentContainer extends Component {
 
     render() {
         return (
-            <div>
+            <div className="swiper-div">
                 <section>
                     <aside> {this.props.title} </aside>
                     <div className="swiper">
@@ -63,6 +62,8 @@ class ContentContainer extends Component {
                                         reg_date={value.createdtime}
                                         areaCode={value.areacode}
                                         contentId={value.contentid}
+                                        addr={value.addr1}
+                                        mouseOver={this.mouseOver}
                                         key={index}
                                     />
                                     );

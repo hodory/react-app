@@ -25,7 +25,7 @@ class MainContainer extends Component {
 
     render() {
         return (
-            <div>
+            <div className="main-content">
                 <ContentContainer title="관광지" contentTypeId={12} areaCode={this.state.areaCode}/>
                 <ContentContainer title="문화시설" contentTypeId={14} areaCode={this.state.areaCode}/>
                 <ContentContainer title="행사/공연/축제" contentTypeId={15} areaCode={this.state.areaCode}/>

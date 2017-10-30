@@ -1,3 +1,7 @@
+.swiper-div {
+    max-width: 500px;
+}
+
 html,
 .swiper {
     position: relative;
@@ -38,7 +42,20 @@ html,
 }
 
 img {
-    width: 400px;
+    width: 500px;
     height: 300px;
     background: black;
+}
+
+.content-layer {
+    display: none;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    height: 100%;
+    padding: 100px 0;
+}
+
+.swiper-content:hover div.content-layer {
+    display: block;
 }
