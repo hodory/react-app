@@ -43,8 +43,8 @@ export const getAreaData = (pageNo, contentTypeId, areaCode, sigunguCode) => {
     });
 }
 
-//관광정보 상세 조회
-export const getDetail = (contentId) => {
+//관광정보 상세 공통정보 조회
+export const getDetailCommon = (contentId) => {
     return axios.get("http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailCommon?ServiceKey=" + Myconfig.API_Auth_Key,
         {
             params: {
@@ -53,6 +53,45 @@ export const getDetail = (contentId) => {
                 firstImageYN : 'Y',
                 addrinfoYN:'Y',
                 overviewYN :'Y',
+                MobileOS: 'ETC',
+                MobileApp: 'AppTesting',
+            }
+        });
+}
+
+//관광정보 상세 소개정보 조회
+export const getDetailIntro = (contentId) => {
+    return axios.get("http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailIntro?ServiceKey=" + Myconfig.API_Auth_Key,
+        {
+            params: {
+                contentId: contentId,
+                MobileOS: 'ETC',
+                MobileApp: 'AppTesting',
+            }
+        });
+}
+
+//관광정보 상세 반복정보 조회
+export const getDetailInfo = (contentId,contentTypeId) => {
+    return axios.get("http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailInfo?ServiceKey=" + Myconfig.API_Auth_Key,
+        {
+            params: {
+                contentId: contentId,
+                contentTypeId: contentTypeId,
+                MobileOS: 'ETC',
+                MobileApp: 'AppTesting',
+            }
+        });
+}
+
+//관광정보 상세 이미지정보 조회
+export const getDetailImage = (contentId,contentTypeId,imageYN) => {
+    return axios.get("http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailImage?ServiceKey=" + Myconfig.API_Auth_Key,
+        {
+            params: {
+                contentId: contentId,
+                contentTypeId: contentTypeId,
+                imageYN: imageYN,
                 MobileOS: 'ETC',
                 MobileApp: 'AppTesting',
             }

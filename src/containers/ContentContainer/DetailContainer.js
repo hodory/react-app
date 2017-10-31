@@ -1,42 +1,36 @@
 import React, { Component } from 'react';
 import * as service from '../../services/getService';
-import Detail from '../../components/Content/Detail';
+import DetailContent from '../../components/Content/DetailContent';
+import DetailContentContainer from './DetailContentContainer';
+import DetailImageContainer from './DetailImageContainer';
 
 class DetailContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: ''
+            contentId: '',
+            contentTypeId: ''
         };
     }
 
-    viewDetail = async (props) => {
+    settingState = (props) => {
         let params = props.match.params;
-        const detail = await service.getDetail(params.contentId);
-        let data = detail.data.response.body.items.item;
         this.setState({
-            data: data
-        });
+            contentId: params.contentId,
+            contentTypeId: params.contentTypeId,
+        })
     }
 
     componentDidMount() {
-        this.viewDetail(this.props);
-    }
-
-    componentWillReceiveProps(nextProps) {
-        this.viewDetail(nextProps);
+        this.settingState(this.props);
     }
 
     render() {
-        let data = this.state.data;
         return (
-                <Detail
-                addr1={data.addr1}
-                addr2={data.addr2}
-                overview={data.overview}
-                tel={data.tel}
-                title={data.title}
-                    />
+            <div>
+                <DetailImageContainer contentId={this.state.contentId} contentTypeId={this.state.contentTypeId} />
+                <DetailContentContainer contentId={this.state.contentId} />
+            </div>
         );
     }
 }

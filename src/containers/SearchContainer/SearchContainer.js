@@ -12,7 +12,7 @@ export default class SearchContainer extends React.Component {
     }
     handleChange(event) {
         this.setState({ value: event.target.value });
-        this.props.history.push('/info/' + event.target.value)
+        this.props.history.push('/area/' + event.target.value)
     }
     render() {
         return (

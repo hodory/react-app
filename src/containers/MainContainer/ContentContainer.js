@@ -61,6 +61,7 @@ class ContentContainer extends Component {
                                         thumb_url={value.firstimage}
                                         reg_date={value.createdtime}
                                         areaCode={value.areacode}
+                                        contentTypeId={value.contenttypeid}
                                         contentId={value.contentid}
                                         addr={value.addr1}
                                         mouseOver={this.mouseOver}

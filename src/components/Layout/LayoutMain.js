@@ -40,6 +40,7 @@ export default class LayoutMain extends React.Component {
                                     thumb_url={value.firstimage}
                                     reg_date={value.createdtime}
                                     areaCode={value.areacode}
+                                    contentTypeId={value.contenttypeid}
                                     contentId={value.contentid}
                                     key={index}
                                 />

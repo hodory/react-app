@@ -21,9 +21,9 @@ class App extends Component {
             <Route exact path="/" component={MainContainer}/>
             <Route exact path="/:areaCode" component={MainSearchContainer}/>
             <Route exact path="/:areaCode" component={MainContainer}/>
-            <Route path="/info/:areaCode" component={SearchContainer}></Route>
-            <Route exact path="/info/:areaCode" component={MainLayoutComponent}></Route>
-            <Route exact path="/info/:areaCode/:contentId" component={DetailContainer}></Route>
+            <Route path="/area/:areaCode" component={SearchContainer}></Route>
+            <Route exact path="/area/:areaCode" component={MainLayoutComponent}></Route>
+            <Route exact path="/detail/:areaCode/:contentTypeId/:contentId" component={DetailContainer}></Route>
           </div>
         </div>
       </Router>
