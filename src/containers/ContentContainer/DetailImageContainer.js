@@ -16,28 +16,27 @@ class DetailImageContainer extends Component {
     viewDetailImages = async (contentId, contentTypeId) => {
         const detailImages = await service.getDetailImage(contentId, contentTypeId);
         let imageData = detailImages.data.response.body.items.item;
-        try{
-            if(imageData.length){
+        try {
+            if (imageData.length) {
                 this.setState({
                     imageData: imageData,
                 });
-            }else{
+            } else {
                 let tmpArray = [];
                 tmpArray.push(imageData);
                 this.setState({
                     imageData: tmpArray
                 });
             }
-        }catch(err){
-            let tmpArray=[{
-                'originimgurl' : noimage,
-                'smallimageurl' : noimage
+        } catch (err) {
+            let tmpArray = [{
+                'originimgurl': noimage,
+                'smallimageurl': noimage
             }];
             this.setState({
                 imageData: tmpArray
             });
         }
-        console.log(this.state.imageData)
 
         let galleryTop = new Swiper('.gallery-top', {
             spaceBetween: 10,
@@ -67,8 +66,8 @@ class DetailImageContainer extends Component {
                 <div>
                     <div className="swiper-container gallery-top">
                         <div className="swiper-wrapper">
-                            {this.state.imageData.map((value,index)=>{
-                                return(
+                            {this.state.imageData.map((value, index) => {
+                                return (
                                     <DetailImages
                                         image_url={value.originimgurl}
                                         key={index}
@@ -82,8 +81,8 @@ class DetailImageContainer extends Component {
                 </div>
                 <div className="swiper-container gallery-thumbs">
                     <div className="swiper-wrapper">
-                        {this.state.imageData.map((value,index)=>{
-                            return(
+                        {this.state.imageData.map((value, index) => {
+                            return (
                                 <DetailImages
                                     image_url={value.smallimageurl}
                                     key={index}

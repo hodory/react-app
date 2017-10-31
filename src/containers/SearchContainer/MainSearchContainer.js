@@ -1,23 +1,38 @@
 import React from 'react';
 import './SearchContainer.css';
-import * as service from '../../services/getService';
 
 export default class MainSearchContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             value: '',
+            areaCode: ''
         };
         this.handleChange = this.handleChange.bind(this);
     }
     handleChange(event) {
-        this.setState({ value: event.target.value });
+        this.setState({
+            value: event.target.value
+        });
         this.props.history.push('/' + event.target.value)
     }
+
+    componentDidMount() {
+        if (this.props.match.params.areaCode !== undefined)
+            this.setSelectBox(this.props.match.params.areaCode);
+    }
+    componenDidUpdate(nextProps) {
+        this.setSelectBox(nextProps.match.params.areaCode);
+    }
+
+    setSelectBox = (value) => {
+        document.getElementById('select_id').value = value;
+    }
+
     render() {
         return (
             <div className="search-div">
-                <select value={this.state.value} onChange={this.handleChange}>
+                <select id="select_id" value={this.state.value} onChange={this.handleChange}>
                     <option value="">전체</option>
                     <option value="1">서울</option>
                     <option value="2">인천</option>

@@ -1,5 +1,4 @@
 import React from 'react';
-import LoginContainer from '../../containers/LoginContainer/LoginContainer';
 import Facebook from './Facebook';
 import Google from './Google';
 import './Login.css';

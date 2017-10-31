@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import * as service from '../../services/getService';
-import DetailContent from '../../components/Content/DetailContent';
 import DetailContentContainer from './DetailContentContainer';
 import DetailImageContainer from './DetailImageContainer';
 
@@ -27,7 +25,7 @@ class DetailContainer extends Component {
 
     render() {
         return (
-            <div>
+            <div className="detail-container">
                 <DetailImageContainer contentId={this.state.contentId} contentTypeId={this.state.contentTypeId} />
                 <DetailContentContainer contentId={this.state.contentId} />
             </div>

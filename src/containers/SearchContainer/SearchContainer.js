@@ -1,5 +1,4 @@
 import React from 'react';
-import * as service from '../../services/getService';
 
 export default class SearchContainer extends React.Component {
     constructor(props) {
@@ -17,7 +16,7 @@ export default class SearchContainer extends React.Component {
     render() {
         return (
             <select value={this.state.value} onChange={this.handleChange}>
-                <option value="">전체</option>
+                <option value="all">전체</option>
                 <option value="1">서울</option>
                 <option value="2">인천</option>
                 <option value="3">대전</option>

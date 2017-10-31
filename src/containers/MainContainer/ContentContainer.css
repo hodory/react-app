@@ -1,7 +1,17 @@
+div.swiper-div section {
+    border-bottom: 1px solid;
+}
+
 div section aside {
     text-align: center;
 }
 
 .swiper {
     min-width: 300px;
+    margin-bottom: 2em;
+}
+
+div.swiper-div:not(:first-of-type) {
+    width: 50%;
+    display: inline-block;
 }

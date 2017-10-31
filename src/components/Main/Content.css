@@ -49,6 +49,7 @@
     height: 100%;
     padding: 100px 0;
     min-width: 490px;
+    max-width: 500px;
 }
 
 .swiper-content:hover div.content-layer {

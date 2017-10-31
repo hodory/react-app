@@ -17,10 +17,10 @@ class App extends Component {
             <TopLayoutComponent />
           </header>
           <div>
-            <Route exact path="/" component={MainSearchContainer}/>
-            <Route exact path="/" component={MainContainer}/>
-            <Route exact path="/:areaCode" component={MainSearchContainer}/>
-            <Route exact path="/:areaCode" component={MainContainer}/>
+            <Route exact path="/" component={MainSearchContainer} />
+            <Route exact path="/" component={MainContainer} />
+            <Route exact path="/:areaCode" component={MainSearchContainer} />
+            <Route exact path="/:areaCode" component={MainContainer} />
             <Route path="/area/:areaCode" component={SearchContainer}></Route>
             <Route exact path="/area/:areaCode" component={MainLayoutComponent}></Route>
             <Route exact path="/detail/:areaCode/:contentTypeId/:contentId" component={DetailContainer}></Route>

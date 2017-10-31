@@ -1,3 +1,18 @@
+div.detail-container {
+    display: flex;
+}
+
+div.detail-container>div {
+    width: 50%;
+}
+
+div.detail-container .swiper-container {
+    max-width: 500px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 div.detail-swiper-div {
     position: relative;
     width: 100%;
@@ -7,13 +22,6 @@ div.detail-swiper-div {
     color: #000;
     margin: 0;
     padding: 0;
-}
-
-.swiper-container {
-    max-width: 500px;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .swiper-slide {
