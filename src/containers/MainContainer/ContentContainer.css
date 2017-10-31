@@ -1,3 +1,7 @@
 div section aside {
     text-align: center;
 }
+
+.swiper {
+    min-width: 300px;
+}

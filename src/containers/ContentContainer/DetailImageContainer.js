@@ -3,6 +3,7 @@ import Swiper from 'swiper/dist/js/swiper.js';
 import * as service from '../../services/getService';
 import DetailImages from '../../components/Content/DetailImages';
 import '../../components/Content/DetailImages.css';
+import noimage from '../../noimage.gif';
 
 class DetailImageContainer extends Component {
     constructor(props) {
@@ -15,11 +16,28 @@ class DetailImageContainer extends Component {
     viewDetailImages = async (contentId, contentTypeId) => {
         const detailImages = await service.getDetailImage(contentId, contentTypeId);
         let imageData = detailImages.data.response.body.items.item;
-        if (imageData) {
+        try{
+            if(imageData.length){
+                this.setState({
+                    imageData: imageData,
+                });
+            }else{
+                let tmpArray = [];
+                tmpArray.push(imageData);
+                this.setState({
+                    imageData: tmpArray
+                });
+            }
+        }catch(err){
+            let tmpArray=[{
+                'originimgurl' : noimage,
+                'smallimageurl' : noimage
+            }];
             this.setState({
-                imageData: imageData,
+                imageData: tmpArray
             });
         }
+        console.log(this.state.imageData)
 
         let galleryTop = new Swiper('.gallery-top', {
             spaceBetween: 10,
@@ -39,14 +57,8 @@ class DetailImageContainer extends Component {
         galleryThumbs.controller.control = galleryTop;
     }
 
-    componentDidMount() {
-    }
-
     componentWillReceiveProps(nextProps) {
         this.viewDetailImages(nextProps.contentId, nextProps.contentTypeId);
-    }
-
-    componentDidUpdate(){
     }
 
     render() {
@@ -56,7 +68,6 @@ class DetailImageContainer extends Component {
                     <div className="swiper-container gallery-top">
                         <div className="swiper-wrapper">
                             {this.state.imageData.map((value,index)=>{
-                                console.log(value)
                                 return(
                                     <DetailImages
                                         image_url={value.originimgurl}

@@ -1,3 +1,7 @@
+body {
+    min-width: 378px;
+}
+
 li {
     list-style: none;
 }

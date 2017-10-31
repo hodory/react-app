@@ -30,6 +30,11 @@ div.detail-swiper-div {
     height: 350px;
 }
 
+.gallery-top .swiper-slide img {
+    max-width: 500px;
+    min-width: 100px;
+}
+
 .gallery-thumbs {
     height: 20%;
     box-sizing: border-box;
