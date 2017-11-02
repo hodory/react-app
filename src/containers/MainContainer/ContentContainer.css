@@ -2,16 +2,15 @@ div.swiper-div section {
     border-bottom: 1px solid;
 }
 
-div section aside {
+div.swiper-div section aside {
     text-align: center;
 }
 
-.swiper {
-    min-width: 300px;
+div.swiper-div .swiper {
     margin-bottom: 2em;
 }
 
-div.swiper-div:not(:first-of-type) {
+div.swiper-div:not(:last-of-type) {
     width: 50%;
     display: inline-block;
 }

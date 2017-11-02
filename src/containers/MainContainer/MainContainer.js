@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ContentContainer from './ContentContainer';
+import TopContentContainer from './TopContentContainer';
 
 class MainContainer extends Component {
 
@@ -25,7 +26,7 @@ class MainContainer extends Component {
     render() {
         return (
             <div className="main-content">
-                <ContentContainer title="관광지" contentTypeId={12} areaCode={this.state.areaCode} />
+                <TopContentContainer title="관광지" contentTypeId={12} areaCode={this.state.areaCode} />
                 <ContentContainer title="문화시설" contentTypeId={14} areaCode={this.state.areaCode} />
                 <ContentContainer title="행사/공연/축제" contentTypeId={15} areaCode={this.state.areaCode} />
                 <ContentContainer title="여행코스" contentTypeId={25} areaCode={this.state.areaCode} />

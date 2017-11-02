@@ -1,0 +1,36 @@
+div.top-swiper-div section aside {
+    text-align: center;
+}
+
+.top-swiper-div {
+    background: #fff;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.top-swiper-div .swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.top-swiper-div .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 300px;
+}
+
+.top-swiper-div .swiper-slide img {
+    max-height: 300px;
+}
+
+.top-swiper-div .swiper-slide.swiper-slide-active .swiper-content .content-layer {
+    display: block;
+    top: 225px;
+    padding: 0 0 0 20px;
+    min-height: 0;
+}
