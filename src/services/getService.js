@@ -108,3 +108,19 @@ export const getFestival = () => {
             }
         });
 }
+
+// 위치 기반 관광정보 조회
+
+export const getLocationInfo = (mapX, mapY, radius) => {
+    return axios.get("http://api.visitkorea.or.kr/openapi/service/rest/KorService/locationBasedList?ServiceKey=" + Myconfig.API_Auth_Key,
+        {
+            params: {
+                arrange: 'S',
+                mapX: mapX,
+                mapY: mapY,
+                radius: radius,
+                MobileOS: 'ETC',
+                MobileApp: 'AppTesting',
+            }
+        });
+}

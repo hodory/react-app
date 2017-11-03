@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Swiper from 'swiper';
+import Swiper from 'swiper/dist/js/swiper.js';
 import Content from '../../components/Main/Content';
 import '../../components/Main/Content.css';
 import * as Service from '../../services/getService.js';
