@@ -7,10 +7,18 @@ const DetailContent = ({ addr1, addr2, firstImage, firstIamge2, hompage, overvie
             <div>{title}</div>
             <div><h2>소개</h2></div>
             <div dangerouslySetInnerHTML={{ __html: overview }}></div>
-            <div><h2>주소</h2></div>
-            <div>{addr1}{addr2}</div>
-            <div><h2>연락처</h2></div>
-            <div>{tel}</div>
+            {addr1 && <div><div><h2>주소</h2></div>
+                <div>{addr1}{addr2}</div></div>}
+            {tel && <div>
+                <div><h2>연락처</h2></div>
+                <div>{tel}</div>
+            </div>
+            }
+            {hompage && <div>
+                <div><h2>홈페이지</h2></div>
+                <div>{hompage}</div>
+            </div>
+            }
         </div>
     );
 };

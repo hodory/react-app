@@ -13,7 +13,7 @@ export const getAreaCode = () => {
 };
 
 //서비스 분류코드조회
-export const getDivisionCode = (contentTypeId,pageNo,NumRows,cat1, cat2) => {
+export const getDivisionCode = (contentTypeId, pageNo, NumRows, cat1, cat2) => {
     return axios.get('http://api.visitkorea.or.kr/openapi/service/rest/KorService/categoryCode?ServiceKey=' + Myconfig.API_Auth_Key, {
         params: {
             contentTypeId: contentTypeId,
@@ -50,9 +50,10 @@ export const getDetailCommon = (contentId) => {
             params: {
                 contentId: contentId,
                 defaultYN: 'Y',
-                firstImageYN : 'Y',
-                addrinfoYN:'Y',
-                overviewYN :'Y',
+                firstImageYN: 'Y',
+                addrinfoYN: 'Y',
+                overviewYN: 'Y',
+                mapinfoYN: 'Y',
                 MobileOS: 'ETC',
                 MobileApp: 'AppTesting',
             }
@@ -72,7 +73,7 @@ export const getDetailIntro = (contentId) => {
 }
 
 //관광정보 상세 반복정보 조회
-export const getDetailInfo = (contentId,contentTypeId) => {
+export const getDetailInfo = (contentId, contentTypeId) => {
     return axios.get("http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailInfo?ServiceKey=" + Myconfig.API_Auth_Key,
         {
             params: {
@@ -85,7 +86,7 @@ export const getDetailInfo = (contentId,contentTypeId) => {
 }
 
 //관광정보 상세 이미지정보 조회
-export const getDetailImage = (contentId,contentTypeId,imageYN) => {
+export const getDetailImage = (contentId, contentTypeId, imageYN) => {
     return axios.get("http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailImage?ServiceKey=" + Myconfig.API_Auth_Key,
         {
             params: {
@@ -101,9 +102,9 @@ export const getDetailImage = (contentId,contentTypeId,imageYN) => {
 // 행사 / 공연/ 축제 조회
 export const getFestival = () => {
     return axios.get("http://api.visitkorea.or.kr/openapi/service/rest/KorService/searchFestival?ServiceKey=" + Myconfig.API_Auth_Key,
-    {
-        params : {
+        {
+            params: {
 
-        }
-    });
+            }
+        });
 }
