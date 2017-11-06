@@ -111,7 +111,7 @@ export const getFestival = () => {
 
 // 위치 기반 관광정보 조회
 
-export const getLocationInfo = (mapX, mapY, radius) => {
+export const getLocationInfo = (mapX, mapY, radius, numofRows) => {
     return axios.get("http://api.visitkorea.or.kr/openapi/service/rest/KorService/locationBasedList?ServiceKey=" + Myconfig.API_Auth_Key,
         {
             params: {
@@ -119,6 +119,7 @@ export const getLocationInfo = (mapX, mapY, radius) => {
                 mapX: mapX,
                 mapY: mapY,
                 radius: radius,
+                numOfRows: numofRows,
                 MobileOS: 'ETC',
                 MobileApp: 'AppTesting',
             }
