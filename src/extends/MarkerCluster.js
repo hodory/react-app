@@ -253,7 +253,6 @@ naver.maps.Util.ClassExtend(MarkerClustering, naver.maps.OverlayView, {
     // KVO 이벤트 핸들러
     changed: function (key, value) {
         if (!this.getMap()) return;
-
         switch (key) {
             case 'marker':
             case 'minClusterSize':
@@ -336,7 +335,6 @@ naver.maps.Util.ClassExtend(MarkerClustering, naver.maps.OverlayView, {
 	 */
     _clearClusters: function () {
         var clusters = this._clusters;
-
         for (var i = 0, ii = clusters.length; i < ii; i++) {
             clusters[i].destroy();
         }

@@ -14,7 +14,7 @@ export default class MainSearchContainer extends React.Component {
         this.setState({
             value: event.target.value
         });
-        this.props.history.push('/' + event.target.value)
+        this.props.history.push('/main/' + event.target.value)
     }
 
     componentDidMount() {

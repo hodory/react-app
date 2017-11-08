@@ -1,0 +1,7 @@
+a.map-infoWindow {
+    text-decoration: none;
+}
+
+a.map-infoWindow:hover {
+    text-decoration-color: rgb(255, 0, 0);
+}

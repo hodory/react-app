@@ -27,10 +27,10 @@ export default class TopLayout extends React.Component {
                     <ul className="clearfix">
                         <li><Link to="/">Home</Link></li>
                         <li>
-                            <Link to="/area/all">지역별조회<span className="arrow">&#9660;</span></Link>
+                            <a>조회<span className="arrow">&#9660;</span></a>
                             <ul className="sub-menu">
-                                <li><a>Components</a></li>
-                                <li><a>Github</a></li>
+                                <li><Link to="/area/all">지역별조회</Link></li>
+                                <li><Link to="/location">위치별조회</Link></li>
                             </ul>
                         </li>
                         <li>
