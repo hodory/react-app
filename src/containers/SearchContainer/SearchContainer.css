@@ -1,3 +1,9 @@
 div.search-div {
     text-align: center;
 }
+
+@media only screen and (max-width:414px) {
+    select.top-selectbox {
+        width: 100%;
+    }
+}

@@ -87,10 +87,10 @@ class MapContainer extends Component {
                     marker = new naver.maps.Marker({
                         position: latlng,
                     }),
-                    contentString = `<div style="width:200px;text-align:center;padding:10px;">
+                    contentString = `<div class="map-infoWindow-div">
                                             <div>
-                                                <a class="map-infoWindow" href="/detail/${locationInfo[i]['areacode']}/${locationInfo[i]['contenttypeid']}/${locationInfo[i]['contentid']}">
-                                                    <img src="${locationInfo[i]['firstimage']}" style="width:100px;height:50px;"/>
+                                                <a class="map-infoWindow-a" href="/detail/${locationInfo[i]['areacode']}/${locationInfo[i]['contenttypeid']}/${locationInfo[i]['contentid']}">
+                                                    <img class="map-infoWindow-img" src="${locationInfo[i]['firstimage']}"/>
                                                     <h3>
                                                         <b>${locationInfo[i]['title']}</b>
                                                     </h3>
@@ -141,7 +141,7 @@ class MapContainer extends Component {
 
     render() {
         return (
-            <div>
+            <div className="location-map-container">
                 <MapComponent />
                 <MapTypeComponent
                     stateTypeId={this.state.contentTypeId}

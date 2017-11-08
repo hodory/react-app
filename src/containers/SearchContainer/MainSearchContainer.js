@@ -32,7 +32,7 @@ export default class MainSearchContainer extends React.Component {
     render() {
         return (
             <div className="search-div">
-                <select id="select_id" value={this.state.value} onChange={this.handleChange}>
+                <select className="top-selectbox" id="select_id" value={this.state.value} onChange={this.handleChange}>
                     <option value="">전체</option>
                     <option value="1">서울</option>
                     <option value="2">인천</option>

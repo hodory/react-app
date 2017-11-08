@@ -6,19 +6,22 @@ import '../../components/Content/DetailMap.css';
 import markerimage from '../../cluster-marker-1.png';
 import MarkerClustering from '../../extends/MarkerCluster';
 
+let map;
+const naver = window.naver;
+const N = window.N;
+
 class DetailMapContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
             longitude: '',
             latitude: '',
+            clickedMarker: '',
             locationInfo: [],
         };
     }
 
     viewDetailMap = (latitude, longitude) => {
-        const naver = window.naver;
-        const N = window.N;
         let mapOptions = {
             //ZoomControl 사용 가능여부 및 옵션
             zoomControl: true,
@@ -33,8 +36,9 @@ class DetailMapContainer extends Component {
             //맵 최소 Zoom
             minZoom: 8
         };
-        let map = new naver.maps.Map('map', mapOptions)
-        let markers = [];
+        this.map = new naver.maps.Map('map', mapOptions)
+        let markers = [],
+            infoWindows = [];
         let htmlMarker = {
             content: '<div style="cursor:pointer;width:40px;height:40px;line-height:42px;font-size:10px;color:white;text-align:center;font-weight:bold;background:url(' + markerimage + ');background-size:contain;"></div>',
             size: N.Size(40, 40),
@@ -47,13 +51,33 @@ class DetailMapContainer extends Component {
                     latlng = new naver.maps.LatLng(spot.mapy, spot.mapx),
                     marker = new naver.maps.Marker({
                         position: latlng,
+                    }),
+                    contentString = `<div style="width:100%;text-align:center;padding:10px;">
+                    <div>
+                        <a class="map-infoWindow" href="/detail/${locationInfo[i]['areacode']}/${locationInfo[i]['contenttypeid']}/${locationInfo[i]['contentid']}">
+                            <img src="${locationInfo[i]['firstimage']}" style="width:100px;height:50px;"/>
+                            <h3>
+                                <b>${locationInfo[i]['title']}</b>
+                            </h3>
+                        </a>
+                    </div>
+                </div>
+                <div>${locationInfo[i]['addr1']}</div>`,
+                    infoWindow = new naver.maps.InfoWindow({
+                        content: contentString
                     });
                 markers.push(marker);
+                infoWindows.push(infoWindow);
             }
+
+            for (let i = 0, ii = markers.length; i < ii; i++) {
+                naver.maps.Event.addListener(markers[i], 'click', this.getClickHandler(i, markers, infoWindows, this.map));
+            }
+
             let markerClustering = new MarkerClustering({
                 minClusterSize: 2,
                 maxZoom: 9,
-                map: map,
+                map: this.map,
                 markers: markers,
                 disableClickZoom: false,
                 gridSize: 120,
@@ -62,6 +86,18 @@ class DetailMapContainer extends Component {
                     clusterMarker.getElement().querySelectorAll('div:first-child')[0].innerText = count;
                 }
             });
+        }
+    }
+
+    getClickHandler = (seq, markers, infoWindows, map) => {
+        return (e) => {
+            var marker = markers[seq],
+                infoWindow = infoWindows[seq];
+            if (infoWindow.getMap()) {
+                infoWindow.close();
+            } else {
+                infoWindow.open(map, marker);
+            }
         }
     }
 
@@ -86,7 +122,7 @@ class DetailMapContainer extends Component {
     render() {
         let locationInfo = this.state.locationInfo;
         return (
-            <div>
+            <div className="detail-map-section">
                 <h2>지도</h2>
                 <div className="map-section">
                     <DetailMap />

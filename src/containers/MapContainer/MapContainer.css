@@ -1,7 +1,43 @@
-a.map-infoWindow {
-    text-decoration: none;
+@media screen and (max-width:414px) {
+    div.map-infoWindow-div {
+        width: 200px;
+        text-align: center;
+        padding: 10px;
+    }
+    a.map-infoWindow-a {
+        text-decoration: none;
+    }
+    a.map-infoWindow-a:hover {
+        text-decoration-color: rgb(255, 0, 0);
+    }
+    a.map-infoWindow-a h3 b {
+        font-size: 1rem;
+    }
+    img.map-infoWindow-img {
+        width: 200px;
+        height: 100px;
+    }
 }
 
-a.map-infoWindow:hover {
-    text-decoration-color: rgb(255, 0, 0);
+@media screen and (min-width:415px) {
+    div.map-infoWindow-div {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+    a.map-infoWindow-a {
+        text-decoration: none;
+        display: -webkit-inline-flex;
+        display: inline-flex;
+    }
+    a.map-infoWindow-a:hover {
+        text-decoration-color: rgb(255, 0, 0);
+    }
+    a.map-infoWindow-a h3 b {
+        font-size: 1rem;
+    }
+    img.map-infoWindow-img {
+        width: 100px;
+        height: 50px;
+    }
 }

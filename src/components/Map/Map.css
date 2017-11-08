@@ -1,4 +1,24 @@
-div.location-map {
-    width: 100%;
-    height: 800px;
+/* Mobile */
+
+@media only screen and (max-width:414px) {
+    div.location-map-container {
+        padding: 15px;
+    }
+    div.location-map {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+
+/* Desktops and Tablets */
+
+@media only screen and (min-width: 415px) {
+    div.location-map-container {
+        padding: 30px;
+    }
+    div.location-map {
+        width: 100%;
+        height: 800px;
+    }
 }

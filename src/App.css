@@ -1,5 +1,5 @@
 body {
-    min-width: 378px;
+    min-width: 360px;
 }
 
 li {
@@ -28,6 +28,7 @@ li {
     border: 1px solid;
     border-color: #919191;
     overflow: hidden;
+    text-align: center;
 }
 
 .main-item .figure {
@@ -121,7 +122,7 @@ html[xmlns] .clearfix {
 }
 
 .sub-menu {
-    width: 160%;
+    width: 140%;
     padding: 5px 0px;
     position: absolute;
     top: 100%;
@@ -131,4 +132,10 @@ html[xmlns] .clearfix {
     transition: opacity linear 0.15s;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
     background: #2e2728;
+}
+
+@media only screen and (max-width:414px) {
+    .container {
+        max-width: 300px;
+    }
 }
