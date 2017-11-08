@@ -17,7 +17,7 @@ class App extends Component {
           <header>
             <TopLayoutComponent />
           </header>
-          <div>
+          <div className="content-section">
             <Route exact path="/" component={MainSearchContainer} />
             <Route exact path="/" component={MainContainer} />
             <Route exact path="/main/:areaCode" component={MainSearchContainer} />

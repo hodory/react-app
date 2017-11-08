@@ -1,9 +1,11 @@
+div.detail-map-section {
+    margin: 20px;
+}
+
+
 /* Mobile */
 
 @media only screen and (max-width:414px) {
-    div.detail-map-section {
-        margin: 20px;
-    }
     div.detail-introduction {
         height: 200px;
         overflow-y: scroll;
@@ -24,8 +26,8 @@
     ul.detail-map-content {
         width: 100%;
         padding-left: 0;
-        border: 1px solid;
-        margin: 1px;
+        border: 0.0125rem solid;
+        margin: 0 0 0.0625rem;
     }
 }
 
@@ -34,20 +36,19 @@
 
 @media only screen and (min-width: 415px) {
     div.detail-map#map {
-        width: 50%;
+        width: 70%;
         height: 500px;
     }
     div.map-section {
         display: flex;
     }
     div.map-content-section {
-        width: 50%;
+        width: 30%;
         height: 500px;
         overflow-y: scroll;
     }
     ul.detail-map-content {
-        width: 50%;
-        border: 1px solid;
-        margin: 1px;
+        border: 0.0125rem solid;
+        margin: 0 0 0.0625rem;
     }
 }

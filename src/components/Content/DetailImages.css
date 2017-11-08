@@ -1,9 +1,15 @@
+div.detail-container {
+    margin: 20px;
+}
+
+div.detail-container>div h2 {
+    margin-top: 0px;
+}
+
+
 /* Mobile */
 
 @media only screen and (max-width:414px) {
-    div.detail-container {
-        margin: 20px;
-    }
     div.detail-container>div {
         width: 100%;
     }

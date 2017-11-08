@@ -6,7 +6,7 @@ const DetailContent = ({ addr1, addr2, firstImage, firstIamge2, hompage, overvie
             <div><h2>제목</h2></div>
             <div>{title}</div>
             <div><h2>소개</h2></div>
-            <div className="detail-introduction" dangerouslySetInnerHTML={{ __html: overview }}></div>
+            <div className="detail-introduction scroll-bar" dangerouslySetInnerHTML={{ __html: overview }}></div>
             {addr1 && <div><div><h2>주소</h2></div>
                 <div>{addr1}{addr2}</div></div>}
             {tel && <div>

@@ -1,153 +1,152 @@
- /* Mobile */
+/* Mobile */
 
- @media only screen and (max-width:414px) {
-     .swiper-div h2 {
-         font-size: 1rem;
-     }
-     .swiper-div .swiper {
-         position: relative;
-         width: 100%;
-         height: 100%;
-         font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-         font-size: 14px;
-         color: #000;
-         margin: 0;
-         padding: 0;
-     }
-     .swiper-div .swiper-container {
-         width: 100%;
-         height: 100%;
-     }
-     .swiper-div .swiper-slide {
-         text-align: center;
-         font-size: 18px;
-         background: #fff;
-         /* Center slide text vertically */
-         display: -webkit-box;
-         display: -ms-flexbox;
-         display: -webkit-flex;
-         display: flex;
-         -webkit-box-pack: center;
-         -ms-flex-pack: center;
-         -webkit-justify-content: center;
-         justify-content: center;
-         -webkit-box-align: center;
-         -ms-flex-align: center;
-         -webkit-align-items: center;
-         align-items: center;
-     }
-     .swiper-div .swiper-slide div.swiper-content img {
-         width: 200px;
-         height: 120px;
-         background: black;
-     }
-     .swiper-div .content-layer {
-         display: none;
-         position: absolute;
-         top: 0;
-         color: white;
-         background: rgba(70, 70, 70, 0.7);
-         padding: 15px 0 0 0;
-         width: 100%;
-         width: 200px;
-         height: 83%;
-         font-size: 0.9rem;
-     }
-     .swiper-div .swiper-content:hover div.content-layer {
-         display: block;
-     }
-     .top-swiper-div .swiper-slide div.swiper-content img {
-         width: 500px;
-         height: 300px;
-         background: black;
-     }
-     .top-swiper-div .swiper-slide div.swiper-content .content-layer {
-         display: none;
-         position: absolute;
-         top: 0;
-         color: white;
-         background: rgba(70, 70, 70, 0.7);
-         width: 100%;
-         padding: 100px 0;
-         min-width: 480px;
-         min-height: 100px;
-     }
-     .top-swiper-div .swiper-content:hover div.content-layer {
-         display: block;
-     }
- }
- /* Desktops and Tablets */
+@media only screen and (max-width:414px) {
+    .swiper-div h2 {
+        font-size: 1rem;
+    }
+    .swiper-div .swiper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-div .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-div .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-div .swiper-slide div.swiper-content img {
+        width: 200px;
+        height: 120px;
+        background: black;
+    }
+    .swiper-div .content-layer {
+        display: none;
+        position: absolute;
+        top: 0;
+        color: white;
+        background: rgba(70, 70, 70, 0.7);
+        padding: 15px 0 0 0;
+        width: 100%;
+        width: 200px;
+        height: 83%;
+        font-size: 0.9rem;
+    }
+    .swiper-div .swiper-content:hover div.content-layer {
+        display: block;
+    }
+    .top-swiper-div .swiper-slide div.swiper-content img {
+        width: 500px;
+        height: 300px;
+        background: black;
+    }
+    .top-swiper-div .swiper-slide div.swiper-content .content-layer {
+        display: none;
+        position: absolute;
+        top: 0;
+        color: white;
+        width: 100%;
+        padding: 100px 0;
+        min-width: 480px;
+        min-height: 100px;
+    }
+    .top-swiper-div .swiper-content:hover div.content-layer {
+        display: block;
+    }
+}
 
- @media only screen and (min-width: 415px) {
-     .swiper-div .swiper {
-         position: relative;
-         width: 100%;
-         height: 100%;
-         font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-         font-size: 14px;
-         color: #000;
-         margin: 0;
-         padding: 0;
-     }
-     .swiper-div .swiper-container {
-         width: 100%;
-         height: 100%;
-     }
-     .swiper-div .swiper-slide {
-         text-align: center;
-         font-size: 18px;
-         background: #fff;
-         /* Center slide text vertically */
-         display: -webkit-box;
-         display: -ms-flexbox;
-         display: -webkit-flex;
-         display: flex;
-         -webkit-box-pack: center;
-         -ms-flex-pack: center;
-         -webkit-justify-content: center;
-         justify-content: center;
-         -webkit-box-align: center;
-         -ms-flex-align: center;
-         -webkit-align-items: center;
-         align-items: center;
-     }
-     .swiper-div .swiper-slide div.swiper-content img {
-         width: 500px;
-         height: 300px;
-         background: black;
-     }
-     .swiper-div .content-layer {
-         display: none;
-         position: absolute;
-         top: 0;
-         color: white;
-         background: rgba(70, 70, 70, 0.7);
-         width: 100%;
-         height: 100%;
-         padding: 100px 0;
-         min-width: 490px;
-         max-width: 500px;
-     }
-     .swiper-div .swiper-content:hover div.content-layer {
-         display: block;
-     }
-     .top-swiper-div .swiper-slide div.swiper-content img {
-         width: 500px;
-         height: 300px;
-         background: black;
-     }
-     .top-swiper-div .swiper-slide div.swiper-content .content-layer {
-         display: none;
-         position: absolute;
-         top: 0;
-         color: white;
-         background: rgba(70, 70, 70, 0.7);
-         width: 100%;
-         padding: 100px 0;
-         min-width: 480px;
-         min-height: 100px;
-     }
-     .top-swiper-div .swiper-content:hover div.content-layer {
-         display: block;
-     }
- }
+
+/* Desktops and Tablets */
+
+@media only screen and (min-width: 415px) {
+    .swiper-div .swiper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-div .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-div .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-div .swiper-slide div.swiper-content img {
+        width: 500px;
+        height: 300px;
+        background: black;
+    }
+    .swiper-div .content-layer {
+        display: none;
+        position: absolute;
+        top: 0;
+        color: white;
+        background: rgba(70, 70, 70, 0.7);
+        width: 100%;
+        height: 100%;
+        padding: 100px 0;
+        min-width: 490px;
+        max-width: 500px;
+    }
+    .swiper-div .swiper-content:hover div.content-layer {
+        display: block;
+    }
+    .top-swiper-div .swiper-slide div.swiper-content img {
+        width: 500px;
+        height: 300px;
+        background: black;
+    }
+    .top-swiper-div .swiper-slide div.swiper-content .content-layer {
+        display: none;
+        position: absolute;
+        top: 0;
+        color: white;
+        background: rgba(70, 70, 70, 0.7);
+        width: 100%;
+        padding: 100px 0;
+        min-width: 480px;
+        min-height: 100px;
+    }
+    .top-swiper-div .swiper-content:hover div.content-layer {
+        display: block;
+    }
+}

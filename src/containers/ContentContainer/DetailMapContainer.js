@@ -46,6 +46,7 @@ class DetailMapContainer extends Component {
         }
         let locationInfo = this.state.locationInfo;
         if (locationInfo.length > 0) {
+            console.log(locationInfo)
             for (let i = 0, ii = locationInfo.length; i < ii; i++) {
                 let spot = locationInfo[i],
                     latlng = new naver.maps.LatLng(spot.mapy, spot.mapx),
@@ -126,7 +127,7 @@ class DetailMapContainer extends Component {
                 <h2>지도</h2>
                 <div className="map-section">
                     <DetailMap />
-                    <div className="map-content-section">
+                    <div className="map-content-section scroll-bar">
                         {locationInfo.map((value, index) => {
                             return (
                                 <DetailMapContent
