@@ -92,6 +92,7 @@
     .swiper-div .swiper-container {
         width: 100%;
         height: 100%;
+        max-width: 500px;
     }
     .swiper-div .swiper-slide {
         text-align: center;
